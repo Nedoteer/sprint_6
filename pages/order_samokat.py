@@ -27,15 +27,15 @@ class OrderSamokat(BasePage):
 
     @allure.step("Сценарий нажатия кнопки вверху экрана")
     def button_one(self):
-        self.driver.find_element(By.XPATH, "//button[@class = 'Button_Button__ra12g']").click()
+        self.driver.find_element(*LocatorZakazSamokat.HEADER_ZAKAZAT).click()
 
 
     @allure.step("Сценарий нажатия кнопки, снизу экрана")
     def button_two(self):
         self.click_cockie()
-        self.driver.find_element(By.XPATH, "//button[@class = 'Button_Button__ra12g Button_UltraBig__UU3Lp']").click()
+        self.driver.find_element(*LocatorZakazSamokat.HEADER_ZAKAZAT2).click()
 
 
     @allure.step("Нажатие кнопки куки")
     def click_cockie(self):
-        self.driver.find_element(By.XPATH, "//button[contains(text(), 'да все привыкли')]").click()
+        self.driver.find_element(*LocatorZakazSamokat.KUKI).click()

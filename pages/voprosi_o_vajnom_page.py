@@ -18,13 +18,20 @@ class VoprosiOVafnom(BasePage):
     def set_voprosi(self, i):
         self.click_cockie()
         self.scroll()
-        vopros = (By.ID, f"accordion__heading-{i}")
-        otvet = (By.ID, f"accordion__panel-{i}")
-        self.driver.find_element(*vopros).click()
-        otveti = self.driver.find_element(*otvet).text
+        new_locator = self.changest_loc(VoprosiOVajnom.otvet, i)
+        new_otvet = self.changest_loc(VoprosiOVajnom.vopros, i)
+        self.driver.find_element(*new_otvet).click()
+        otveti = self.driver.find_element(*new_locator).text
         return otveti
 
 
     @allure.step('Нажатие на куки')
     def click_cockie(self):
         self.driver.find_element(*VoprosiOVajnom.KUKI).click()
+
+    @allure.step('Преображение локатора')
+    def changest_loc(self, locator, i):
+        b,l = locator
+        res = l.replace('0', f'{i}')
+        new = [b, res]
+        return new

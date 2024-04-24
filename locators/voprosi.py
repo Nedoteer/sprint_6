@@ -20,3 +20,5 @@ class VoprosiOVajnom:
     VOPROS8 = (By.ID, "accordion__heading-7")
     OTVET_VOPROS8 = (By.ID, "accordion__panel-7")
     KUKI = (By.XPATH, "//button[contains(text(), 'да все привыкли')]")
+    vopros = (By.ID, "accordion__heading-0")
+    otvet = (By.ID, "accordion__panel-0")

@@ -244,3 +244,4 @@ cython_debug/
 /.idea/misc.xml
 /.idea/modules.xml
 /.idea/inspectionProfiles/profiles_settings.xml
+!/test_m.py

@@ -21,3 +21,4 @@ class LocatorZakazSamokat:
     ZAKAZAT = (By.XPATH, "//button[@class = 'Button_Button__ra12g Button_Middle__1CSJM']")
     KNOPKA_DA = (By.XPATH, "//button[contains(text(), 'Да')]")
     DONE = (By.XPATH, "//button[contains(text(), 'Посмотреть статус')]")
+    KUKI = (By.XPATH, "//button[contains(text(), 'да все привыкли')]")
